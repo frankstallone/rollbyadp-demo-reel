@@ -4,10 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build:tailwind": "tailwindcss -i ./src/global.css -o ./dist/global.css",
-    "watch:tailwind": "tailwindcss -i ./src/global.css -o ./dist/global.css --watch",
-    "start": "NODE_ENV=development webpack serve",
-    "build": "NODE_ENV=production webpack",
+    "start": "webpack serve --config webpack.development.config.js --env development",
+    "build": "webpack --config webpack.production.config.js --env production",
     "format": "prettier --write src"
   },
   "author": "Frank Stallone III",
