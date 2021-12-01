@@ -7,7 +7,8 @@
     "build:tailwind": "tailwindcss -i ./src/global.css -o ./dist/global.css",
     "watch:tailwind": "tailwindcss -i ./src/global.css -o ./dist/global.css --watch",
     "start": "NODE_ENV=development webpack serve",
-    "build": "NODE_ENV=production webpack"
+    "build": "NODE_ENV=production webpack",
+    "format": "prettier --write src"
   },
   "author": "Frank Stallone III",
   "license": "ISC",
@@ -19,6 +20,7 @@
     "mini-css-extract-plugin": "^2.4.5",
     "postcss": "^8.4.4",
     "postcss-loader": "^6.2.1",
+    "prettier": "^2.5.0",
     "tailwindcss": "^2.2.19",
     "ts-loader": "^9.2.6",
     "typescript": "^4.5.2",
