@@ -6,7 +6,7 @@
   "scripts": {
     "build:tailwind": "tailwindcss -i ./src/global.css -o ./dist/global.css",
     "watch:tailwind": "tailwindcss -i ./src/global.css -o ./dist/global.css --watch",
-    "start": "webpack serve",
+    "start": "NODE_ENV=development webpack serve",
     "build": "NODE_ENV=production webpack"
   },
   "author": "Frank Stallone III",

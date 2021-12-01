@@ -31,6 +31,9 @@ module.exports = {
   resolve: {
     extensions: ['.tsx', '.ts', '.js'],
   },
+  devServer: {
+    watchFiles:['src/**/*'] // to detect changes on all files inside src directory
+  },
   output: {
     filename: 'bundle.js',
     path: path.resolve(__dirname, 'dist'),
@@ -38,7 +41,11 @@ module.exports = {
   },
   plugins: [
     new MiniCssExtractPlugin(),
-    new HtmlWebpackPlugin({ template: './src/index.html' }),
+    new HtmlWebpackPlugin({ 
+      template: './src/index.html',
+      // This should be for dev only
+      cache: false
+    }),
     new CopyPlugin({
       patterns: [
         { from: path.resolve(__dirname, 'src', 'assets'), to: path.resolve(__dirname, 'dist', 'assets') },
