@@ -5,13 +5,24 @@
   "main": "index.js",
   "scripts": {
     "build:tailwind": "tailwindcss -i ./src/global.css -o ./dist/global.css",
-    "watch:tailwind": "tailwindcss -i ./src/global.css -o ./dist/global.css --watch"
+    "watch:tailwind": "tailwindcss -i ./src/global.css -o ./dist/global.css --watch",
+    "start": "webpack serve",
+    "build": "NODE_ENV=production webpack"
   },
   "author": "Frank Stallone III",
   "license": "ISC",
   "devDependencies": {
     "autoprefixer": "^10.4.0",
+    "css-loader": "^6.5.1",
+    "html-webpack-plugin": "^5.5.0",
+    "mini-css-extract-plugin": "^2.4.5",
     "postcss": "^8.4.4",
-    "tailwindcss": "^2.2.19"
+    "postcss-loader": "^6.2.1",
+    "tailwindcss": "^2.2.19",
+    "ts-loader": "^9.2.6",
+    "typescript": "^4.5.2",
+    "webpack": "^5.64.4",
+    "webpack-cli": "^4.9.1",
+    "webpack-dev-server": "^4.6.0"
   }
 }
