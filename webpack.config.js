@@ -1,5 +1,6 @@
-const MiniCssExtractPlugin = require("mini-css-extract-plugin")
-const HtmlWebpackPlugin = require('html-webpack-plugin')
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const CopyPlugin = require("copy-webpack-plugin");
 const path = require('path');
 
 module.exports = {
@@ -21,6 +22,10 @@ module.exports = {
           "postcss-loader",
       ],
       },
+      {
+        test: /\.(png|svg|jpg|jpeg|gif|mp4)$/i,
+        type: 'asset/resource',
+      },
     ],
   },
   resolve: {
@@ -33,6 +38,11 @@ module.exports = {
   },
   plugins: [
     new MiniCssExtractPlugin(),
-    new HtmlWebpackPlugin({ template: './src/index.html' })
+    new HtmlWebpackPlugin({ template: './src/index.html' }),
+    new CopyPlugin({
+      patterns: [
+        { from: path.resolve(__dirname, 'src', 'assets'), to: path.resolve(__dirname, 'dist', 'assets') },
+      ],
+    }),
 ],
 };
