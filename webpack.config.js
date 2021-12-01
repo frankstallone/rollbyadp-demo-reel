@@ -39,6 +39,11 @@ module.exports = {
     path: path.resolve(__dirname, 'dist'),
     clean: true,
   },
+  performance: {
+    assetFilter: function (assetFilename) {
+      return assetFilename.endsWith('.js');
+    },
+  },
   plugins: [
     new MiniCssExtractPlugin(),
     new HtmlWebpackPlugin({ 
