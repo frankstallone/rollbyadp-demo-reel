@@ -45,7 +45,6 @@ module.exports = {
     new MiniCssExtractPlugin(),
     new HtmlWebpackPlugin({ 
       template: './src/index.html',
-      cache: false
     }),
     new CopyPlugin({
       patterns: [

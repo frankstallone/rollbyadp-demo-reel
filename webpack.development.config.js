@@ -6,6 +6,7 @@ const path = require('path');
 module.exports = {
   entry: './src/scripts/index.ts',
   mode: "development",
+  cache:false,
   module: {
     rules: [
       {
@@ -47,7 +48,6 @@ module.exports = {
     new MiniCssExtractPlugin(),
     new HtmlWebpackPlugin({ 
       template: './src/index.html',
-      cache: false
     }),
     new CopyPlugin({
       patterns: [

@@ -3,6 +3,7 @@ module.exports = {
   purge: [
     './src/**/*.html',
     './src/**/*.js',
+    './src/**/*.css',
   ],
   darkMode: false, // or 'media' or 'class'
   theme: {
@@ -12,4 +13,7 @@ module.exports = {
     extend: {},
   },
   plugins: [],
+  presets: [
+    require('@adplabs/roll-design-tokens/dist/tailwind.config')
+  ],
 }
