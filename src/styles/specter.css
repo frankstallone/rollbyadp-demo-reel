@@ -1,0 +1,57 @@
+@font-face {
+	font-family: 'Specter';
+	font-weight: 400;
+	font-style: normal;
+	src: url('../fonts/specter/Specter-Regular.woff2') format('woff2'),
+		url('../fonts/specter/Specter-Regular.otf') format('opentype');
+}
+
+@font-face {
+	font-family: 'Specter';
+	font-weight: 400;
+	font-style: italic;
+	src: url('../fonts/specter/Specter-RegularItalic.woff2') format('woff2'),
+		url('../fonts/specter/Specter-RegularItalic.otf') format('opentype');
+}
+
+@font-face {
+	font-family: 'Specter';
+	font-weight: 500;
+	font-style: normal;
+	src: url('../fonts/specter/Specter-Medium.woff2') format('woff2'),
+		url('../fonts/specter/Specter-Medium.woff') format('woff'),
+		url('../fonts/specter/Specter-Medium.eot');
+}
+
+@font-face {
+	font-family: 'Specter';
+	font-weight: 500;
+	font-style: italic;
+	src: url('../fonts/specter/Specter-MediumItalic.woff2') format('woff2'),
+		url('../fonts/specter/Specter-MediumItalic.woff') format('woff'),
+		url('../fonts/specter/Specter-MediumItalic.eot');
+}
+
+@font-face {
+	font-family: 'Specter';
+	font-weight: 700;
+	font-style: normal;
+	src: url('../fonts/specter/Specter-Bold.woff2') format('woff2'),
+		url('../fonts/specter/Specter-Bold.otf') format('opentype');
+}
+
+@font-face {
+	font-family: 'Specter';
+	font-weight: 700;
+	font-style: italic;
+	src: url('../fonts/specter/Specter-BoldItalic.woff2') format('woff2'),
+		url('../fonts/specter/Specter-BoldItalic.otf') format('opentype');
+}
+
+@font-face {
+	font-family: 'Specter';
+	font-weight: 900;
+	font-style: normal;
+	src: url('../fonts/specter/Specter-Ultra.woff2') format('woff2'),
+		url('../fonts/specter/Specter-Ultra.otf') format('opentype');
+}

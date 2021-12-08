@@ -16,7 +16,7 @@ module.exports = {
       },
       {
         test: /\.css$/i,
-        include: path.resolve(__dirname, 'src'),
+        include: path.resolve(__dirname, 'src/styles'),
         use: [
           MiniCssExtractPlugin.loader,
           "css-loader",
@@ -24,7 +24,7 @@ module.exports = {
       ],
       },
       {
-        test: /\.(png|svg|jpg|jpeg|gif|mp4)$/i,
+        test: /\.(png|svg|jpg|jpeg|gif|mp4|woff|woff2|otf|ttf)$/i,
         type: 'asset/resource',
       },
     ],

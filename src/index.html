@@ -8,7 +8,10 @@
   </head>
   <body>
     <div id="root" class="mx-auto p-10 lg:px-0 lg:py-10 max-w-5xl text-neutral-1200">
-      <div class="grid grid-rows-1 grid-cols-2">
+      <div class="flex w-full justify-center text-center mb-10">
+        <h1 class="font-display font-bold text-2xl">Demo widget</h1>
+      </div>
+      <div class="grid grid-rows-1 grid-cols-3">
         <aside class="flex items-center">
           <div class="bg-neutral-100 w-full h-[95%] rounded-l-xl">
             <button name="payroll" class="text-2xl">Payroll run</button>
@@ -17,11 +20,16 @@
         <main class="rounded-xl overflow-hidden border-8 border-neutral-800">
           <video controls>
             <source
-              src="assets/roll-payrollPrep-push-run.mp4"
-              type="video/mp4"
+            src="assets/roll-payrollPrep-push-run.mp4"
+            type="video/mp4"
             />
           </video>
         </main>
+        <aside class="flex items-center">
+          <div class="bg-neutral-100 w-full h-[95%] rounded-l-xl">
+            <p>Description</p>
+          </div>
+        </aside>
       </div>
     </div>
   </body>
