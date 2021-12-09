@@ -31,7 +31,7 @@ const render = (state: State) => {
         onClick: () => dispatch({ type: 'CHOOSE_TOPIC', index }),
         name: 'payroll',
         class:
-          'flex justify-center items-center p-4 border-b rounded-full text-lg uppercase font-display font-medium w-full text-left bg-purple-700 text-purple-100 hover:bg-purple-800 transition-all ease-in-out duration-75 active:scale-95',
+          'flex justify-center items-center p-4 rounded-full text-lg uppercase font-display font-medium w-full text-left bg-purple-700 text-purple-100 hover:bg-purple-800 transition-all ease-in-out duration-75 active:scale-95',
       })
     );
   });

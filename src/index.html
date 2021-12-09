@@ -9,14 +9,24 @@
   <body>
     <div id="root" class="text-neutral-1200 bg-neutral-100 w-full">
       <div
-        class="flex mx-auto lg:py-10 max-w-5xl p-10 lg:px-0 justify-center text-center flex-col"
+        class="flex mx-auto lg:py-10 max-w-5xl p-10 lg:px-0 justify-center flex-col"
       >
-        <h1 class="font-display font-bold text-4xl mb-10">Demo widget</h1>
+        <h1 class="font-display font-bold text-4xl mb-10 text-center">Roll Reel Widget</h1>
+
+
+        <ul class="list-none flex mb-10 mx-auto">
+          <!-- Active tab button .bg-purple-700.text-purple-100 hover:bg-purple-800 -->
+          <li><button class="flex justify-center items-center p-4 rounded-l-full text-lg uppercase font-display font-medium w-full text-left bg-purple-700 text-purple-100 hover:bg-purple-800 transition-all ease-in-out duration-75 px-8 border-r border-purple-100">Business owner</button></li>
+          <!-- Deactive tab button .bg-purple-200.text-purple-1000 hover:bg-purple-300 -->
+          <li><button class="flex justify-center items-center p-4 rounded-r-full text-lg uppercase font-display font-medium w-full text-left bg-purple-200 text-purple-1000 hover:bg-purple-300 transition-all ease-in-out duration-75 px-8">Employee</button></li>
+        </ul>
+
         <div class="grid grid-rows-1 grid-cols-3 font-medium">
           <aside class="flex items-center">
+            <noscript>Please enable JavaScript</noscript>
             <div
               id="topics-container"
-              class="bg-white w-full h-[95%] rounded-l-current py-8 px-2 space-y-6"
+              class="bg-white w-full h-[95%] rounded-l-current py-8 px-4 space-y-4"
             ></div>
           </aside>
           <main
@@ -32,7 +42,7 @@
           <aside class="flex items-center">
             <div
               id="description-container"
-              class="bg-white w-full h-[95%] rounded-r-current py-8"
+              class="bg-white w-full h-[95%] rounded-r-current py-8 px-6 text-lg font-normal"
             >
               <p>Helpful Tips</p>
             </div>
