@@ -7,29 +7,60 @@
     <title>Roll Video Widget</title>
   </head>
   <body>
-    <div id="root" class="mx-auto p-10 lg:px-0 lg:py-10 max-w-5xl text-neutral-1200">
-      <div class="flex w-full justify-center text-center mb-10">
-        <h1 class="font-display font-bold text-2xl">Demo widget</h1>
-      </div>
-      <div class="grid grid-rows-1 grid-cols-3">
-        <aside class="flex items-center">
-          <div class="bg-neutral-100 w-full h-[95%] rounded-l-xl">
-            <button name="payroll" class="text-2xl">Payroll run</button>
-          </div>
-        </aside>
-        <main class="rounded-xl overflow-hidden border-8 border-neutral-800">
-          <video controls>
-            <source
-            src="assets/roll-payrollPrep-push-run.mp4"
-            type="video/mp4"
-            />
-          </video>
-        </main>
-        <aside class="flex items-center">
-          <div class="bg-neutral-100 w-full h-[95%] rounded-l-xl">
-            <p>Description</p>
-          </div>
-        </aside>
+    <div id="root" class="text-neutral-1200 bg-neutral-100 w-full">
+      <div
+        class="flex mx-auto lg:py-10 max-w-5xl p-10 lg:px-0 justify-center text-center flex-col"
+      >
+        <h1 class="font-display font-bold text-4xl mb-10">Demo widget</h1>
+        <div class="grid grid-rows-1 grid-cols-3 font-medium">
+          <aside class="flex items-center">
+            <div class="bg-white w-full h-[95%] rounded-l-current py-8 px-2 space-y-6">
+              <button
+                name="payroll"
+                class="flex justify-center items-center p-4 border-b rounded-full text-lg uppercase font-display font-medium w-full text-left bg-purple-700 text-purple-100 hover:bg-purple-800 transition-all ease-in-out duration-75 active:scale-95"
+              >
+                Setting up your company
+              </button>
+              <button
+                name="payroll"
+                class="flex justify-center items-center p-4 border-b rounded-full text-lg uppercase font-display font-medium w-full text-left bg-purple-700 text-purple-100 hover:bg-purple-800 transition-all ease-in-out duration-75 active:scale-95"
+              >
+                Running payroll
+              </button>
+              <button
+                name="payroll"
+                class="flex justify-center items-center p-4 border-b rounded-full text-lg uppercase font-display font-medium w-full text-left bg-purple-700 text-purple-100 hover:bg-purple-800 transition-all ease-in-out duration-75 active:scale-95"
+              >
+                Hiring an employee
+              </button>
+              <button
+                name="payroll"
+                class="flex justify-center items-center p-4 border-b rounded-full text-lg uppercase font-display font-medium w-full text-left bg-purple-700 text-purple-100 hover:bg-purple-800 transition-all ease-in-out duration-75 active:scale-95"
+              >
+                Adjusting a salary
+              </button>
+              <button
+                name="payroll"
+                class="flex justify-center items-center p-4 border-b rounded-full text-lg uppercase font-display font-medium w-full text-left bg-purple-700 text-purple-100 hover:bg-purple-800 transition-all ease-in-out duration-75 active:scale-95"
+              >
+                Getting help
+              </button>
+            </div>
+          </aside>
+          <main class="rounded-current shadow-2xl overflow-hidden border-8 border-neutral-800">
+            <video controls>
+              <source
+                src="assets/roll-payrollPrep-push-run.mp4"
+                type="video/mp4"
+              />
+            </video>
+          </main>
+          <aside class="flex items-center">
+            <div class="bg-white w-full h-[95%] rounded-r-current py-8">
+              <p>Description</p>
+            </div>
+          </aside>
+        </div>
       </div>
     </div>
   </body>

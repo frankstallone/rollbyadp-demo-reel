@@ -10,6 +10,9 @@ module.exports = {
     extend: {
       fontFamily: {
         display: ['Specter', 'ui-sans-serif', 'system-ui']
+      },
+      borderRadius: {
+        current: '30px'
       }
     },
   },
