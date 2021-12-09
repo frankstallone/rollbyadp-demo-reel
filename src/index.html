@@ -14,40 +14,14 @@
         <h1 class="font-display font-bold text-4xl mb-10">Demo widget</h1>
         <div class="grid grid-rows-1 grid-cols-3 font-medium">
           <aside class="flex items-center">
-            <div class="bg-white w-full h-[95%] rounded-l-current py-8 px-2 space-y-6">
-              <button
-                name="payroll"
-                class="flex justify-center items-center p-4 border-b rounded-full text-lg uppercase font-display font-medium w-full text-left bg-purple-700 text-purple-100 hover:bg-purple-800 transition-all ease-in-out duration-75 active:scale-95"
-              >
-                Setting up your company
-              </button>
-              <button
-                name="payroll"
-                class="flex justify-center items-center p-4 border-b rounded-full text-lg uppercase font-display font-medium w-full text-left bg-purple-700 text-purple-100 hover:bg-purple-800 transition-all ease-in-out duration-75 active:scale-95"
-              >
-                Running payroll
-              </button>
-              <button
-                name="payroll"
-                class="flex justify-center items-center p-4 border-b rounded-full text-lg uppercase font-display font-medium w-full text-left bg-purple-700 text-purple-100 hover:bg-purple-800 transition-all ease-in-out duration-75 active:scale-95"
-              >
-                Hiring an employee
-              </button>
-              <button
-                name="payroll"
-                class="flex justify-center items-center p-4 border-b rounded-full text-lg uppercase font-display font-medium w-full text-left bg-purple-700 text-purple-100 hover:bg-purple-800 transition-all ease-in-out duration-75 active:scale-95"
-              >
-                Adjusting a salary
-              </button>
-              <button
-                name="payroll"
-                class="flex justify-center items-center p-4 border-b rounded-full text-lg uppercase font-display font-medium w-full text-left bg-purple-700 text-purple-100 hover:bg-purple-800 transition-all ease-in-out duration-75 active:scale-95"
-              >
-                Getting help
-              </button>
-            </div>
+            <div
+              id="topics-container"
+              class="bg-white w-full h-[95%] rounded-l-current py-8 px-2 space-y-6"
+            ></div>
           </aside>
-          <main class="rounded-current shadow-2xl overflow-hidden border-8 border-neutral-800">
+          <main
+            class="rounded-current shadow-2xl overflow-hidden border-8 border-neutral-800 bg-neutral-800"
+          >
             <video controls>
               <source
                 src="assets/roll-payrollPrep-push-run.mp4"
@@ -56,8 +30,11 @@
             </video>
           </main>
           <aside class="flex items-center">
-            <div class="bg-white w-full h-[95%] rounded-r-current py-8">
-              <p>Description</p>
+            <div
+              id="description-container"
+              class="bg-white w-full h-[95%] rounded-r-current py-8"
+            >
+              <p>Helpful Tips</p>
             </div>
           </aside>
         </div>
