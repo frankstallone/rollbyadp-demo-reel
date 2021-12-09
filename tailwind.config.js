@@ -4,6 +4,7 @@ module.exports = {
     './src/**/*.html',
     './src/**/*.js',
     './src/**/*.css',
+    './src/**/*.ts',
   ],
   darkMode: false, // or 'media' or 'class'
   theme: {
