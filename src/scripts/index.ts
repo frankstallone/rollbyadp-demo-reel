@@ -94,7 +94,9 @@ const render = (state: State) => {
   if (activeTopic.listItems) {
     const liElements = activeTopic.listItems.map((item) => $('li', [item]));
 
-    descriptionContainer.appendChild($('ul', liElements));
+    descriptionContainer.appendChild(
+      $('ul', liElements, { class: 'list-disc list-inside' })
+    );
   }
 };
 
