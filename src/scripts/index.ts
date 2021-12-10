@@ -50,9 +50,10 @@ const render = (state: State) => {
     ' '
   );
 
-  const inactiveCn = 'bg-purple-200 text-purple-500 hover:bg-purple-300 hover:text-purple-700'.split(
-    ' '
-  );
+  const inactiveCn =
+    'bg-purple-200 text-purple-500 hover:bg-purple-300 hover:text-purple-700'.split(
+      ' '
+    );
 
   if (state.topicFilter === 'businessOwner') {
     businessOwnerButton.classList.remove(...inactiveCn);
@@ -89,10 +90,14 @@ const render = (state: State) => {
   });
 
   const activeTopic = topics[state.topicIndex];
-  descriptionContainer.appendChild($('p', [activeTopic.desc], { class: 'mb-4 animate-fadeIn' }));
+  descriptionContainer.appendChild(
+    $('p', [activeTopic.desc], { class: 'mb-4 animate-fadeIn' })
+  );
 
   if (activeTopic.listItems) {
-    const liElements = activeTopic.listItems.map((item) => $('li', [item], { class: 'mb-2' }));
+    const liElements = activeTopic.listItems.map((item) =>
+      $('li', [item], { class: 'mb-2' })
+    );
 
     descriptionContainer.appendChild(
       $('ul', liElements, { class: 'list-disc list-inside' })
