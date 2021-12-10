@@ -1,7 +1,7 @@
 import '../styles/main.css';
 import '../styles/specter.css';
 import { businessOwnerTopics, employeeOrContractorTopics } from './data';
-import { find, $ } from './dom';
+import { find, $, cn, createHoverClassNames } from './dom';
 import { state, State, Action, reducer } from './state';
 
 const render = (state: State) => {
@@ -25,24 +25,21 @@ const render = (state: State) => {
 
   businessOwnerButton.addEventListener(
     'click',
-    () => {
+    () =>
       dispatch({
         type: 'CHOOSE_TOPIC_FILTER',
         filter: 'businessOwner',
-      });
-    },
+      }),
     { once: true }
   );
 
   employeeButton.addEventListener(
     'click',
-    () => {
-      console.log('you clicked me');
+    () =>
       dispatch({
         type: 'CHOOSE_TOPIC_FILTER',
         filter: 'employeeOrContractor',
-      });
-    },
+      }),
     { once: true }
   );
 
@@ -78,13 +75,39 @@ const render = (state: State) => {
       ? businessOwnerTopics
       : employeeOrContractorTopics;
 
+  const activeButtonCn =
+    'before:block before:absolute before:-left-10 before:-right-1 before:-inset-y-1 before:-skew-y-1 before:bg-yellow-200 before:-z-10';
+
   topics.forEach((topic, index) => {
     topicsContainer.appendChild(
       $('button', [topic.title], {
         onClick: () => dispatch({ type: 'CHOOSE_TOPIC', index }),
         name: 'payroll',
-        class:
-          'flex justify-left items-center px-4 py-2 text-left text-lg uppercase font-display font-bold text-yellow-900 hover:text-yellow-1000 before:transition before:ease-in-out before:duration-500 active:scale-95 hover:before:block hover:before:absolute hover:before:-left-10 hover:before:-right-1  hover:before:-inset-y-1 hover:before:-skew-y-1 hover:before:bg-yellow-200 hover:before:-z-10 z-0 relative',
+        class: cn([
+          // highlight the active button
+          { [activeButtonCn]: index === state.topicIndex },
+
+          // highlight other buttons on hover only
+          createHoverClassNames(activeButtonCn),
+
+          'flex',
+          'justify-left',
+          'items-center',
+          'px-4',
+          'py-2',
+          'text-left',
+          'text-lg',
+          'uppercase',
+          'font-display',
+          'font-bold',
+          'text-yellow-900',
+          'hover:text-yellow-1000',
+          'before:transition',
+          'before:ease-in-out',
+          'before:duration-500',
+          'active:scale-95',
+          'z-0 relative',
+        ]),
       })
     );
   });

@@ -145,3 +145,29 @@ const svgShortcodesMap = new Map([
   ['(i)', infoIcon],
   ['[help + headphones icon]', headphonesIcon],
 ]);
+
+export const cn = (classNames: CnItem[]) =>
+  classNames
+    .map((c) => {
+      if (typeof c === 'string') {
+        return c;
+      }
+
+      const [className] = Object.keys(c);
+
+      if (c[className]) {
+        return className;
+      }
+
+      return '';
+    })
+    .filter((c) => !!c.trim())
+    .join(' ');
+
+type CnItem = string | { [x: string]: boolean };
+
+export const createHoverClassNames = (classNames: string) =>
+  classNames
+    .split(' ')
+    .map((s) => `hover:${s}`)
+    .join(' ');
