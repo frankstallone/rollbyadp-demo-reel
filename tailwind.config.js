@@ -11,6 +11,9 @@ module.exports = {
       },
       borderRadius: {
         current: '30px'
+      },
+      fontSize: {
+        '5xl': '2.125rem'
       }
     },
   },

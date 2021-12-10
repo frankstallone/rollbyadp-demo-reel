@@ -50,7 +50,7 @@ const render = (state: State) => {
     ' '
   );
 
-  const inactiveCn = 'bg-purple-200 text-purple-1000 hover:bg-purple-300'.split(
+  const inactiveCn = 'bg-purple-200 text-purple-500 hover:bg-purple-300 hover:text-purple-700'.split(
     ' '
   );
 
@@ -83,16 +83,16 @@ const render = (state: State) => {
         onClick: () => dispatch({ type: 'CHOOSE_TOPIC', index }),
         name: 'payroll',
         class:
-          'flex justify-center items-center p-4 rounded-full text-lg uppercase font-display font-medium w-full text-center bg-purple-700 text-purple-100 hover:bg-purple-800 transition-all ease-in-out duration-75 active:scale-95',
+          'flex justify-left items-center px-4 py-2 text-left text-lg uppercase font-display font-medium text-yellow-900 hover:text-yellow-1000 before:transition before:ease-in-out before:duration-500 active:scale-95 hover:before:block hover:before:absolute hover:before:-inset-1 hover:before:-skew-y-2 hover:before:bg-yellow-200 hover:before:-z-10 z-0 relative',
       })
     );
   });
 
   const activeTopic = topics[state.topicIndex];
-  descriptionContainer.appendChild($('p', [activeTopic.desc]));
+  descriptionContainer.appendChild($('p', [activeTopic.desc], { class: 'mb-4' }));
 
   if (activeTopic.listItems) {
-    const liElements = activeTopic.listItems.map((item) => $('li', [item]));
+    const liElements = activeTopic.listItems.map((item) => $('li', [item], { class: 'mb-2' }));
 
     descriptionContainer.appendChild(
       $('ul', liElements, { class: 'list-disc list-inside' })
