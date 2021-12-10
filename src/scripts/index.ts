@@ -83,13 +83,13 @@ const render = (state: State) => {
         onClick: () => dispatch({ type: 'CHOOSE_TOPIC', index }),
         name: 'payroll',
         class:
-          'flex justify-left items-center px-4 py-2 text-left text-lg uppercase font-display font-medium text-yellow-900 hover:text-yellow-1000 before:transition before:ease-in-out before:duration-500 active:scale-95 hover:before:block hover:before:absolute hover:before:-inset-1 hover:before:-skew-y-2 hover:before:bg-yellow-200 hover:before:-z-10 z-0 relative',
+          'flex justify-left items-center px-4 py-2 text-left text-lg uppercase font-display font-bold text-yellow-900 hover:text-yellow-1000 before:transition before:ease-in-out before:duration-500 active:scale-95 hover:before:block hover:before:absolute hover:before:-left-10 hover:before:-right-1  hover:before:-inset-y-1 hover:before:-skew-y-1 hover:before:bg-yellow-200 hover:before:-z-10 z-0 relative',
       })
     );
   });
 
   const activeTopic = topics[state.topicIndex];
-  descriptionContainer.appendChild($('p', [activeTopic.desc], { class: 'mb-4' }));
+  descriptionContainer.appendChild($('p', [activeTopic.desc], { class: 'mb-4 animate-fadeIn' }));
 
   if (activeTopic.listItems) {
     const liElements = activeTopic.listItems.map((item) => $('li', [item], { class: 'mb-2' }));
