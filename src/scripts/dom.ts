@@ -1,4 +1,3 @@
-// DOM helpers
 export const $ = (
   elName: string,
   children?: (string | Node)[],
