@@ -75,8 +75,16 @@ const render = (state: State) => {
       ? businessOwnerTopics
       : employeeOrContractorTopics;
 
-  const activeButtonCn =
-    'before:block before:absolute before:-left-10 before:-right-1 before:-inset-y-1 before:-skew-y-1 before:bg-yellow-200 before:-z-10';
+  const activeButtonCn = cn([
+    'before:block',
+    'before:absolute',
+    'before:-left-10',
+    'before:-right-1',
+    'before:-inset-y-1',
+    'before:-skew-y-1',
+    'before:bg-yellow-200',
+    'before:-z-10',
+  ]);
 
   topics.forEach((topic, index) => {
     topicsContainer.appendChild(
