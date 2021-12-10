@@ -65,7 +65,7 @@ const headphonesIcon = `
   role="img"
   xmlns="http://www.w3.org/2000/svg"
   viewBox="0 0 64 64"
-  class="w-8 inline px-2"
+  class="w-4 inline ml-2"
   >
     <g transform="matrix( 1, 0, 0, 1, 0,0)">
       <g>
@@ -105,10 +105,28 @@ const withRenderedSvgs = (value: string) => {
   const beforeNode = document.createTextNode(before);
   const afterNode = document.createTextNode(after);
 
-  const parser = new DOMParser();
-  const svgEl = parser.parseFromString(svg, 'image/svg+xml');
+  const el =
+    shortcode === '(i)' ? renderInfoIcon() : renderButtonWithHeadphonesIcon();
 
-  return [beforeNode, svgEl.documentElement, afterNode];
+  return [beforeNode, el, afterNode];
+};
+
+const renderButtonWithHeadphonesIcon = () => {
+  const parser = new DOMParser();
+  const svgEl = parser.parseFromString(
+    headphonesIcon,
+    'image/svg+xml'
+  ).documentElement;
+
+  return $('button', ['Help', svgEl], {
+    class:
+      'border border-purple-500 rounded-full px-3 inline-flex items-center align-center justify-items-center',
+  });
+};
+
+const renderInfoIcon = () => {
+  const parser = new DOMParser();
+  return parser.parseFromString(infoIcon, 'image/svg+xml').documentElement;
 };
 
 const getSvgShortCode = (value: string) => {
