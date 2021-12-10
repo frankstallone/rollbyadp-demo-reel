@@ -1,12 +1,9 @@
 module.exports = {
-  mode: 'jit',
-  purge: [
+  content: [
     './src/**/*.html',
-    './src/**/*.js',
     './src/**/*.css',
     './src/**/*.ts',
   ],
-  darkMode: false, // or 'media' or 'class'
   theme: {
     extend: {
       fontFamily: {
@@ -16,9 +13,6 @@ module.exports = {
         current: '30px'
       }
     },
-  },
-  variants: {
-    extend: {},
   },
   plugins: [],
   presets: [
