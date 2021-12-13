@@ -48,7 +48,7 @@ const render = (state: State) => {
   );
 
   const inactiveCn =
-    'bg-purple-200 text-purple-500 hover:bg-purple-300 hover:text-purple-700'.split(
+    'bg-white text-purple-500 hover:bg-purple-100 hover:text-purple-700'.split(
       ' '
     );
 
