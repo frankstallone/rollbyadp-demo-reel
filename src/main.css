@@ -1,0 +1,11 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+p {
+  -webkit-transition: opacity 0.8s ease-in;
+  -moz-transition: opacity 0.8s ease-in;
+  -ms-transition: opacity 0.8s ease-in;
+  -o-transition: opacity 0.8s ease-in;
+  transition: opacity 0.8s ease-in;
+}
