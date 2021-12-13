@@ -9,7 +9,12 @@ module.exports = {
       colors: {
         'marketing': {
           bg: '#f7f6f4',
-          text: '#121c4e'
+          text: '#121c4e',
+          'button': {
+            bg: '#fce3df',
+            'bg-hover': '#fbd7d1',
+            text: '#de0a65'
+          }
         },
       },
       fontFamily: {
@@ -20,6 +25,9 @@ module.exports = {
       },
       fontSize: {
         '5xl': '2.125rem'
+      },
+      borderWidth: {
+        '10': '10px'
       },
       keyframes: {
         fadeIn: {

@@ -82,8 +82,11 @@ const render = (state: State) => {
     'before:-right-1',
     'before:-inset-y-1',
     'before:-skew-y-1',
-    'before:bg-yellow-200',
+    'before:bg-marketing-button-bg',
+    'hover:before:bg-marketing-button-bg-hover',
     'before:-z-10',
+    'text-marketing-button-text',
+    'hover:no-underline',
   ]);
 
   topics.forEach((topic, index) => {
@@ -109,12 +112,18 @@ const render = (state: State) => {
           'font-display',
           'font-bold',
           'text-neutral-1200',
-          'hover:text-neutral-1000',
           'before:transition',
           'before:ease-in-out',
           'before:duration-500',
           'active:scale-95',
           'z-0 relative',
+          'hover:underline',
+          'hover:underline-offset-1',
+          'hover:decoration-4',
+          'hover:decoration-marketing-button-text',
+          'hover:transition',
+          'hover:ease-in-out',
+          'hover:duration-500',
         ]),
       })
     );
