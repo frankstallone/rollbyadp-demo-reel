@@ -15,7 +15,7 @@ export const businessOwnerTopics: Topic[] = [
   },
   {
     title: 'Hiring an employee',
-    desc: 'It couldn’t be easier to add someone to the payroll! All you need are these five things:',
+    desc: 'It couldn’t be easier to add someone to the payroll! All you need are these six things:',
     listItems: [
       'Legal name',
       'Home address',
@@ -33,7 +33,7 @@ export const businessOwnerTopics: Topic[] = [
     title: 'Getting help',
     desc: 'If you ever get stuck or have questions, there are three easy ways to get help:',
     listItems: [
-      'Type “Help” to watch our intro video or see a list of tasks you can start in chat.',
+      'Type “Help” to see a list of tasks you can start in chat.',
       'Tap (i) anytime you see the icon in a conversation to learn more about a certain question or topic.',
       "Tap [help + headphones icon] to start a live chat with our support team. They're here to assist you 24/7!",
     ],
