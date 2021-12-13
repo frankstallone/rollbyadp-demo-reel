@@ -6,6 +6,12 @@ module.exports = {
   ],
   theme: {
     extend: {
+      colors: {
+        'marketing': {
+          bg: '#f7f6f4',
+          text: '#121c4e'
+        },
+      },
       fontFamily: {
         display: ['Specter', 'ui-sans-serif', 'system-ui']
       },
