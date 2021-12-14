@@ -134,7 +134,6 @@ const App = () => {
             </div>
           </aside>
 
-          {/* <main className="rounded-current shadow-2xl shadow-purple-900 overflow-hidden border-10 border-purple-1000 bg-purple-1000 z-0"> */}
           <main className="rounded-current overflow-hidden border-10 border-purple-1000 bg-purple-1000 z-0">
             <video controls>
               <source src="roll-payrollPrep-push-run.mp4" type="video/mp4" />
