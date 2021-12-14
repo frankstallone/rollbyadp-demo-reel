@@ -14,6 +14,22 @@ const App = () => {
 
   const activeTopic = topics[state.topicIndex];
 
+  // 50 / 50 coin flip to determine the skew direction
+  const coinFlip = Math.random() < 0.5;
+  const activeButtonCn = cn([
+    'before:block',
+    'before:absolute',
+    'before:-left-10',
+    'before:-right-1',
+    'before:-inset-y-1',
+    coinFlip ? 'before:-skew-y-1' : 'before:skew-y-1',
+    'before:bg-marketing-button-bg',
+    'hover:before:bg-marketing-button-bg-hover',
+    'before:-z-10',
+    'text-marketing-button-text',
+    'hover:no-underline',
+  ]);
+
   return (
     <div className="text-neutral-1200 bg-marketing-bg w-full relative z-10 min-h-screen hidden md:block">
       <div className="flex mx-auto lg:py-10 max-w-5xl p-10 lg:px-0 justify-center flex-col">
@@ -117,7 +133,7 @@ const App = () => {
             </div>
           </aside>
 
-          <main className="rounded-current shadow-2xl overflow-hidden border-10 border-neutral-800 bg-neutral-800">
+          <main className="rounded-current shadow-2xl overflow-hidden border-10 border-blue-1000 bg-blue-1000">
             <video controls>
               <source src="roll-payrollPrep-push-run.mp4" type="video/mp4" />
             </video>
@@ -189,19 +205,7 @@ const topicFilterButtonCn = cn([
   'px-8',
 ]);
 
-const activeButtonCn = cn([
-  'before:block',
-  'before:absolute',
-  'before:-left-10',
-  'before:-right-1',
-  'before:-inset-y-1',
-  'before:-skew-y-1',
-  'before:bg-marketing-button-bg',
-  'hover:before:bg-marketing-button-bg-hover',
-  'before:-z-10',
-  'text-marketing-button-text',
-  'hover:no-underline',
-]);
+
 
 const createHoverClassNames = (classNames: string) =>
   classNames
