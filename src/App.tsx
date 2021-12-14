@@ -27,17 +27,18 @@ const App = () => {
     'hover:before:bg-marketing-button-bg-hover',
     'before:-z-10',
     'text-marketing-button-text',
+    'no-underline',
     'hover:no-underline',
   ]);
 
   return (
-    <div className="text-neutral-1200 bg-marketing-bg w-full relative z-10 min-h-screen hidden md:block">
+    <div className="text-neutral-1200 bg-marketing-bg w-full relative z-10 min-h-screen hidden md:block py-14">
       <div className="flex mx-auto lg:py-10 max-w-5xl p-10 lg:px-0 justify-center flex-col">
-        <h1 className="font-display font-extrabold text-5xl mb-10 text-center">
+        <h1 className="font-display font-extrabold text-5xl mb-14 text-center">
           Roll Highlight Reel
         </h1>
 
-        <ul className="list-none flex mb-10 mx-auto">
+        <ul className="list-none flex mb-14 mx-auto">
           <li>
             <button
               onClick={() =>
@@ -98,9 +99,6 @@ const App = () => {
                       // highlight the active button
                       { [activeButtonCn]: index === state.topicIndex },
 
-                      // highlight other buttons on hover only
-                      createHoverClassNames(activeButtonCn),
-
                       'flex',
                       'justify-left',
                       'items-center',
@@ -117,13 +115,16 @@ const App = () => {
                       'before:duration-500',
                       'active:scale-95',
                       'z-0 relative',
+                      'decoration-transparent',
+                      'underline',
+                      'decoration-4',
+                      'underline-offset-1',
                       'hover:underline',
                       'hover:underline-offset-1',
                       'hover:decoration-4',
                       'hover:decoration-marketing-button-text',
-                      'hover:transition',
-                      'hover:ease-in-out',
-                      'hover:duration-500',
+                      'transition-all',
+                      'ease-in-out',
                     ])}
                   >
                     {topic.title}
@@ -133,7 +134,7 @@ const App = () => {
             </div>
           </aside>
 
-          <main className="rounded-current shadow-xl shadow-purple-900 overflow-hidden border-10 border-purple-1000 bg-purple-1000 z-0">
+          <main className="rounded-current shadow-2xl shadow-purple-900 overflow-hidden border-10 border-purple-1000 bg-purple-1000 z-0">
             <video controls>
               <source src="roll-payrollPrep-push-run.mp4" type="video/mp4" />
             </video>
@@ -141,29 +142,45 @@ const App = () => {
 
           <aside className="flex items-center">
             <div className="bg-white w-full lg:h-[65%] h-[90%] rounded-r-current py-8 px-8 lg:text-lg font-normal font-display overflow-hidden">
-                <motion.div
-                  key={activeTopic.desc}
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1, transition: { duration: 0.5 } }}
-                >
-                  <p className="mb-4">{activeTopic.desc}</p>
+              <motion.div
+                key={activeTopic.desc}
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1, transition: { duration: 0.5 } }}
+              >
+                <p className="mb-4">{activeTopic.desc}</p>
 
-                  {activeTopic.listItems && (
-                    <ul className="list-disc list-inside">
-                      {activeTopic.listItems.map((item) => (
-                        <li className="mb-2" key={item}>
-                          {parseShortcodes(item)}
-                        </li>
-                      ))}
-                    </ul>
-                  )}
-                </motion.div>
+                {activeTopic.listItems && (
+                  <ul className="list-disc list-inside">
+                    {activeTopic.listItems.map((item) => (
+                      <li className="mb-2" key={item}>
+                        {parseShortcodes(item)}
+                      </li>
+                    ))}
+                  </ul>
+                )}
+              </motion.div>
             </div>
           </aside>
         </div>
       </div>
-
       <svg
+        width="994.5px"
+        height="898.5px"
+        viewBox="0 0 1989 1797"
+        version="1.1"
+        xmlns="http://www.w3.org/2000/svg"
+        className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 -z-10 text-[#3fd4fe]"
+      >
+        <g transform="matrix(1,0,0,1,-405,-97)">
+          <g transform="matrix(1.62604,0,0,1.62604,-367.367,-834.719)">
+            <path
+              d="M475,1241.5C475,933.539 826.867,1066.62 1038,931C1215.25,817.146 1187.17,573 1301,573C1410,573 1698,745 1698,1027C1698,1309 1529,1678 1247,1678C939.039,1678 475,1549.46 475,1241.5Z"
+              fill='currentColor'
+            />
+          </g>
+        </g>
+      </svg>
+      {/* <svg
         width="1090px"
         height="623px"
         viewBox="0 0 1090 623"
@@ -183,7 +200,7 @@ const App = () => {
             </g>
           </g>
         </g>
-      </svg>
+      </svg> */}
     </div>
   );
 };
@@ -204,14 +221,6 @@ const topicFilterButtonCn = cn([
   'duration-75',
   'px-8',
 ]);
-
-
-
-const createHoverClassNames = (classNames: string) =>
-  classNames
-    .split(' ')
-    .map((s) => `hover:${s}`)
-    .join(' ');
 
 const parseShortcodes = (desc: string) => {
   if (desc.includes('(i)')) {

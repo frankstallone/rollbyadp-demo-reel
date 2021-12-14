@@ -12,6 +12,7 @@ module.exports = {
             text: '#de0a65',
           },
         },
+        transparent: 'transparent'
       },
       fontFamily: {
         display: ['Specter', 'ui-sans-serif', 'system-ui'],
