@@ -21,7 +21,7 @@ module.exports = {
         current: '30px',
       },
       fontSize: {
-        '5xl': '2.125rem',
+        '5xl': '3rem',
       },
       borderWidth: {
         10: '10px',

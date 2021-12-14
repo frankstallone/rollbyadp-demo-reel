@@ -32,9 +32,9 @@ const App = () => {
   ]);
 
   return (
-    <div className="text-neutral-1200 bg-marketing-bg w-full relative z-10 min-h-screen hidden md:block py-14">
-      <div className="flex mx-auto lg:py-10 max-w-5xl p-10 lg:px-0 justify-center flex-col">
-        <h1 className="font-display font-extrabold text-5xl mb-14 text-center">
+    <div className="text-marketing-text bg-marketing-bg w-full relative z-10 min-h-screen hidden md:block py-14">
+      <div className="flex mx-auto lg:py-10 px-[15px] max-w-[1160px] justify-center flex-col">
+        <h1 className="font-display font-extrabold text-4xl mb-14 text-center">
           Roll Highlight Reel
         </h1>
 
@@ -134,7 +134,8 @@ const App = () => {
             </div>
           </aside>
 
-          <main className="rounded-current shadow-2xl shadow-purple-900 overflow-hidden border-10 border-purple-1000 bg-purple-1000 z-0">
+          {/* <main className="rounded-current shadow-2xl shadow-purple-900 overflow-hidden border-10 border-purple-1000 bg-purple-1000 z-0"> */}
+          <main className="rounded-current overflow-hidden border-10 border-purple-1000 bg-purple-1000 z-0">
             <video controls>
               <source src="roll-payrollPrep-push-run.mp4" type="video/mp4" />
             </video>
