@@ -87,7 +87,7 @@ const App = () => {
 
         <div className="grid grid-rows-1 grid-cols-3 font-medium">
           <aside className="flex items-center">
-            <div className="bg-white w-full h-[65%] rounded-l-current py-8 px-4">
+            <div className="bg-white w-full lg:h-[65%] h-[90%] rounded-l-current py-8 px-4">
               {topics.map((topic, index) => {
                 return (
                   <button
@@ -108,7 +108,7 @@ const App = () => {
                       'py-2',
                       'mb-4',
                       'text-left',
-                      'text-lg',
+                      'lg:text-lg',
                       'uppercase',
                       'font-display',
                       'font-bold',
@@ -140,7 +140,7 @@ const App = () => {
           </main>
 
           <aside className="flex items-center">
-            <div className="bg-white w-full h-[65%] rounded-r-current py-8 px-8 text-lg font-normal font-display overflow-hidden">
+            <div className="bg-white w-full lg:h-[65%] h-[90%] rounded-r-current py-8 px-8 lg:text-lg font-normal font-display overflow-hidden">
                 <motion.div
                   key={activeTopic.desc}
                   initial={{ opacity: 0 }}
