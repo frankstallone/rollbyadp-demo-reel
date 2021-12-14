@@ -133,14 +133,14 @@ const App = () => {
             </div>
           </aside>
 
-          <main className="rounded-current shadow-2xl overflow-hidden border-10 border-blue-1000 bg-blue-1000">
+          <main className="rounded-current shadow-xl shadow-purple-900 overflow-hidden border-10 border-purple-1000 bg-purple-1000 z-0">
             <video controls>
               <source src="roll-payrollPrep-push-run.mp4" type="video/mp4" />
             </video>
           </main>
 
           <aside className="flex items-center">
-            <div className="bg-white w-full h-[65%] rounded-r-current py-8 px-8 text-lg font-normal font-display">
+            <div className="bg-white w-full h-[65%] rounded-r-current py-8 px-8 text-lg font-normal font-display overflow-hidden">
                 <motion.div
                   key={activeTopic.desc}
                   initial={{ opacity: 0 }}
