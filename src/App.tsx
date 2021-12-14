@@ -1,5 +1,5 @@
 import { useReducer } from 'react';
-import { AnimatePresence, motion } from 'framer-motion';
+import { motion } from 'framer-motion';
 import cn from 'classnames';
 import { initialState, reducer } from './state';
 import { businessOwnerTopics, employeeOrContractorTopics } from './data';
@@ -125,12 +125,10 @@ const App = () => {
 
           <aside className="flex items-center">
             <div className="bg-white w-full h-[65%] rounded-r-current py-8 px-8 text-lg font-normal font-display">
-              <AnimatePresence>
                 <motion.div
                   key={activeTopic.desc}
                   initial={{ opacity: 0 }}
-                  animate={{ opacity: 1, transition: { duration: 0.8 } }}
-                  exit={{ opacity: 0, transition: { duration: 0.1 } }}
+                  animate={{ opacity: 1, transition: { duration: 0.5 } }}
                 >
                   <p className="mb-4">{activeTopic.desc}</p>
 
@@ -144,7 +142,6 @@ const App = () => {
                     </ul>
                   )}
                 </motion.div>
-              </AnimatePresence>
             </div>
           </aside>
         </div>
