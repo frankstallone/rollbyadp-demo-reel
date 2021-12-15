@@ -1,4 +1,4 @@
-export const state: State = {
+export const initialState: State = {
   topicFilter: 'businessOwner',
   topicIndex: 0,
 };
@@ -27,6 +27,6 @@ export interface State {
 
 type TopicFilter = 'businessOwner' | 'employeeOrContractor';
 
-export type Action =
+type Action =
   | { type: 'CHOOSE_TOPIC'; index: number }
   | { type: 'CHOOSE_TOPIC_FILTER'; filter: TopicFilter };
