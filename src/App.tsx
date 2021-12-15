@@ -25,10 +25,12 @@ export const App = () => {
     coinFlip ? 'before:-skew-y-1' : 'before:skew-y-1',
     'before:bg-marketing-button-bg',
     'hover:before:bg-marketing-button-bg-hover',
+    'focus:before:bg-marketing-button-bg-hover',
     'before:-z-10',
     'text-marketing-button-text',
     'no-underline',
     'hover:no-underline',
+    'focus:no-underline',
   ]);
 
   return (
@@ -51,9 +53,9 @@ export const App = () => {
                 topicFilterButtonCn,
                 'rounded-l-full',
                 {
-                  'bg-purple-700 text-purple-100 hover:bg-purple-800':
+                  'bg-purple-700 text-purple-100 hover:bg-purple-800 focus:bg-purple-800 focus:outline-none':
                     state.topicFilter === 'businessOwner',
-                  'bg-white text-purple-500 hover:bg-purple-100 hover:text-purple-700':
+                  'bg-white text-purple-500 hover:bg-purple-100 hover:text-purple-700 focus:bg-purple-100 focus:text-purple-700 focus:outline-none':
                     state.topicFilter !== 'businessOwner',
                 },
               ])}
@@ -74,9 +76,9 @@ export const App = () => {
                 topicFilterButtonCn,
                 'rounded-r-full',
                 {
-                  'bg-purple-700 text-purple-100 hover:bg-purple-800':
+                  'bg-purple-700 text-purple-100 hover:bg-purple-800 focus:bg-purple-800 focus:outline-none':
                     state.topicFilter === 'employeeOrContractor',
-                  'bg-white text-purple-500 hover:bg-purple-100 hover:text-purple-700':
+                  'bg-white text-purple-500 hover:bg-purple-100 hover:text-purple-700 focus:text-purple-700 focus:bg-purple-100 focus:outline-none':
                     state.topicFilter !== 'employeeOrContractor',
                 },
               ])}
@@ -123,6 +125,11 @@ export const App = () => {
                       'hover:underline-offset-1',
                       'hover:decoration-4',
                       'hover:decoration-marketing-button-text',
+                      'focus:outline-none',
+                      'focus:underline',
+                      'focus:underline-offset-1',
+                      'focus:decoration-4',
+                      'focus:decoration-marketing-button-text',
                       'transition-all',
                       'ease-in-out',
                     ])}
